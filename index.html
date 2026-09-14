@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dylan's Notepad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="window">
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <div class="title-bar-buttons">
+        <span class="tb-btn">_</span>
+        <span class="tb-btn">□</span>
+        <span class="tb-btn">✕</span>
+      </div>
+      <div class="title-bar-text">Dylan's Notepad</div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="menu-bar" role="tablist">
+      <button class="tab active" role="tab" aria-selected="true" onclick="showTab('home', this)">home</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="showTab('education', this)">education</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="showTab('experience', this)">experience</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="showTab('projects', this)">projects</button>
+      <button class="tab about-tab" role="tab" aria-selected="false" onclick="showTab('about', this)">about</button>
+      <button class="tab" role="tab" aria-selected="false" onclick="showTab('contact', this)">contact</button>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <!-- HOME -->
+      <div id="home" class="page active" role="tabpanel">
+        <div class="landing">
+            <h1 aria-label="Good Morning, I'm Dylan!">
+                <span id="greeting-text"></span>
+                <span class="cursor"></span>
+            </h1>
+            <p class="tagline">
+            CS + Mathematics @ NUS | 
+            ML & Data @ Infineon | 
+            Graduating in May 2027
+          </p>
+          <p>
+            Welcome to my humble abode. Feel free to explore!
+          </p>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div id="education" class="page" role="tabpanel">
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">National University of Singapore (NUS)</span>
+            <span class="entry-date">Aug 2022 - May 2027</span>
+          </div>
+          <ul>
+            <li>Double Degrees in Computer Science (GPA: 4.35) and Mathematics (GPA: 4.13)</li>
+            <li>NUS Merit Scholarship</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Technical University of Munich (TUM)</span>
+            <span class="entry-date">Apr 2025 - Aug 2025</span>
+          </div>
+          <ul>
+            <li>Exchange Semester at School of Computation, Information and Technology</li>
+            <li>Courses attended: Fundamentals of AI, Machine Learning, Efficient Algorithms and Data Structures II, Natural Language Processing</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Raffles Institution</span>
+            <span class="entry-date">Jan 2014 - Dec 2019</span>
+          </div>
+          <ul>
+            <li>GCE A Levels - 6 As</li>
+            <li>Physics, Chemistry, Mathematics, Economics, General Paper, Project Work</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div id="experience" class="page" role="tabpanel">
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Infineon Technologies</span>
+            <span class="entry-date">May 2026 - Present</span>
+          </div>
+          <div class="entry-sub">Machine Learning and Data Analytics Intern</div>
+          <ul>
+            <li>Implementing ETL pipeline and dashboard for visualising operational data, facilitating real-time analysis.</li>
+            <li>Prompt engineering and behavioural control of LLMs for a domain-knowledge chatbot, reducing technicians' workload.</li>
+            <li>Development of end-to-end user-defined model training and validation pipeline for prediction.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Rakuten Viki</span>
+            <span class="entry-date">Aug 2024 - Jan 2025</span>
+          </div>
+          <div class="entry-sub">Data Analytics Intern</div>
+          <ul>
+            <li>Designed and created dashboards for business insights and key metric tracking.</li>
+            <li>Assisted in QA testing for database migration - manual testing on staging servers and real-time aggregate checks on production.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Speedoc</span>
+            <span class="entry-date">Jan 2022 - Jul 2022</span>
+          </div>
+          <div class="entry-sub">Data Analytics Intern</div>
+          <ul>
+            <li>Formulated ETL pipeline for primary data ingestion used in key visualisations.</li>
+            <li>Designed and executed data integration from multiple sources to improve operational processes.</li>
+            <li>Handled cross-departmental data reporting - invoice activity monitoring and doctor/nurse utilisation tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div id="projects" class="page" role="tabpanel">
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Fine-Tuning Models for Entity-Aware Machine Translation</span>
+            <span class="entry-date">Apr 2025 - Aug 2025</span>
+          </div>
+          <ul>
+            <li>Fine-tuned pre-trained models for English↔German and English↔Turkish translation, focusing on accurate named entity translation.</li>
+            <li>Utilised HuggingFace's transformers library for dataset loading, model training, and evaluation.</li>
+            <li><span class="tag-label">Tech Stack:</span> Python, transformers (HuggingFace), WandB, Colab</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Facial Identification and Emotion Classification</span>
+            <span class="entry-date">Mar 2024 - Apr 2024</span>
+          </div>
+          <ul>
+            <li>Utilised OpenCV to identify faces through a live video stream.</li>
+            <li>Implemented and trained a CNN using TensorFlow to classify emotions on identified faces in real-time.</li>
+            <li><span class="tag-label">Tech Stack:</span> Python, OpenCV, TensorFlow</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="about" class="page" role="tabpanel">
+        <p>
+          I'm Dylan - a CS + Mathematics student at NUS, expected to graduate in May 2027.
+        </p>
+
+        <div class="tag-group">
+          <span class="tag-label">Languages: &nbsp;</span>
+          Python, SQL, Java, LookML, C, C#, MIPS
+        </div>
+        <div class="tag-group">
+          <span class="tag-label">Tools: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          Git, VS Code, Colab, Looker, Tableau, MongoDB, MySQL, OpenShift
+        </div>
+        <div class="tag-group">
+          <span class="tag-label">Libraries: &nbsp;</span>
+          Pandas, NumPy, HuggingFace Transformers, TensorFlow, OpenCV, Plotly, Streamlit
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact" class="page" role="tabpanel">
+        <div class="entry">
+          <ul class="contact-list">
+            <li>
+              <span class="tag-label">Email:</span>
+              <a href="mailto:EmailMe@DylanWong.com">EmailMe@DylanWong.com</a>
+            </li>
+            <li>
+              <span class="tag-label">Mobile:</span>
+              <span>+65 8121 4066</span>
+            </li>
+            <li>
+              <span class="tag-label">LinkedIn:</span>
+              <a href="https://linkedin.com/in/thewongdylan" target="_blank">linkedin.com/in/thewongdylan</a>
+            </li>
+            <li>
+              <span class="tag-label">GitHub:</span>
+              <a href="https://github.com/thewongdylan" target="_blank">github.com/thewongdylan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span id="status-text">
+            dylanwong.com
+        </span>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const greeting = document.getElementById('greeting-text');
+        const text = "Good Morning, I'm Dylan!";
+        const typingSpeed = 70;
+        let characterIndex = 0;
+
+        function typeNextCharacter() {
+        if (characterIndex >= text.length) {
+            return;
+        }
+
+        greeting.textContent += text[characterIndex];
+        characterIndex += 1;
+        setTimeout(typeNextCharacter, typingSpeed);
+        }
+
+        typeNextCharacter();
+        
+        // Basic hash routing on load
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            const targetTab = document.querySelector(`.tab[onclick*="${hash}"]`);
+            if (targetTab) showTab(hash, targetTab);
+        }
+    });
+
+    function showTab(name, element) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+        });
+        
+        document.getElementById(name).classList.add('active');
+        element.classList.add('active');
+        element.setAttribute('aria-selected', 'true');
+        
+        // Update URL for bookmarking
+        window.history.pushState(null, null, `#${name}`);
+    }
+  </script>
+
+</body>
+</html>
